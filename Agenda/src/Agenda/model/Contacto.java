@@ -5,7 +5,7 @@ public class Contacto {
     // ATRIBUTOS
     private String nombre;
     private String apellido;
-    private int numero;
+    private Integer numero;
 
 
     // CONSTRUCTOR
