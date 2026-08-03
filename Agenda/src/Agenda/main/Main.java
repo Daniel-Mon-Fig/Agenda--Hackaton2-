@@ -2,6 +2,10 @@ package Agenda.main;
  import Agenda.model.Agenda;
  import Agenda.model.AgregarContacto;
 
+
+ import Agenda.model.EliminarContacto;
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,6 +15,15 @@ public class Main {
         AgregarContacto agregar= new AgregarContacto(agenda);
 
         agregar.add();
-    }
 
+
+        EliminarContacto eliminar = new EliminarContacto(agenda);
+
+        eliminar.eliminarContacto();
+
+
+
+
+
+    }
 }
