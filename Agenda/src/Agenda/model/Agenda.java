@@ -4,6 +4,6 @@ import java.util.ArrayList;
 
 public class Agenda {
 
-    private ArrayList<Contacto> contactos = new ArrayList<>();
+    public ArrayList<Contacto> contactos = new ArrayList<>();
 
 }
