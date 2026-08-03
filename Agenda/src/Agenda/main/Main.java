@@ -14,7 +14,8 @@ public class Main {
 
         listarContacto.listarContactos(agenda);
 
-       agregar.add();listarContacto.listarContactos(agenda);
+       agregar.add();
+       listarContacto.listarContactos(agenda);
     }
 
 }
