@@ -28,5 +28,10 @@ public class AgregarContacto {
         //se crea el contacto
         Contacto nuevo = new Contacto(nombre, apellido, numero);
 
+        //guardar contacto en la agenda
+        agenda.AgregarContacto(nuevo);
+
+        System.out.println("El contacto se guardó correctamente");
+
     }
 }

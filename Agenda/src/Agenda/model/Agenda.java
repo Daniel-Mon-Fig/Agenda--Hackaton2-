@@ -7,5 +7,6 @@ public class Agenda {
     private ArrayList<Contacto> contactos = new ArrayList<>();
 
 
-
+    public void AgregarContacto(Contacto nuevo) {
+    }
 }
