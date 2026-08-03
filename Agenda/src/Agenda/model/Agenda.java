@@ -4,10 +4,14 @@ import java.util.ArrayList;
 
 public class Agenda {
 
-    public ArrayList<Contacto> contactos = new ArrayList<>();
-
+    private ArrayList<Contacto> contactos = new ArrayList<>();
 
     public void AgregarContacto(Contacto nuevo) {
         contactos.add(nuevo);
     }
+    public ArrayList<Contacto> getContactos() {
+        return contactos;
+    }
 }
+
+

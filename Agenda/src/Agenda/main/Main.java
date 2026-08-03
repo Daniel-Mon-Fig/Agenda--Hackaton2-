@@ -2,6 +2,8 @@ package Agenda.main;
  import Agenda.model.Agenda;
  import Agenda.model.AgregarContacto;
  import Agenda.model.ListarContacto;
+ import Agenda.model.BuscarContacto;
+
 
 public class Main {
 
@@ -11,11 +13,12 @@ public class Main {
 
         AgregarContacto agregar= new AgregarContacto(agenda);
         ListarContacto listarContacto = new ListarContacto();
+        BuscarContacto buscador = new BuscarContacto(agenda);
 
         listarContacto.listarContactos(agenda);
 
-       agregar.add();
-       listarContacto.listarContactos(agenda);
+        //agregar.add();
+
     }
 
 }
