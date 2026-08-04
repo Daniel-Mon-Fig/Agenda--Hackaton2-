@@ -41,4 +41,15 @@ public class Contacto {
         this.numero = numero;
     }
 
+    //toString
+
+
+    @Override
+    public String toString() {
+        return "Contacto{" +
+                "Nombre='" + nombre + '\'' +
+                ", Apellido='" + apellido + '\'' +
+                ",Numero=" + numero +
+                '}';
+    }
 }
