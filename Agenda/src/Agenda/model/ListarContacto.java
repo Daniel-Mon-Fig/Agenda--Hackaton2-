@@ -11,13 +11,13 @@ public class ListarContacto {
         this.agenda = agenda;
 
         // Validar si la agenda está vacía
-        if (agenda.contactos.isEmpty()) {
+        if (agenda.getContactos().isEmpty()) {
             System.out.println("La agenda no tiene contactos.");
             return; // Detener programa si no hay datos
         }
 
         // Lista para ordenar contactos
-        ArrayList<Contacto> listaOrdenada = new ArrayList<>(agenda.contactos);
+        ArrayList<Contacto> listaOrdenada = new ArrayList<>(agenda.getContactos());
 
         // Ordenar alfabéticamente
         listaOrdenada.sort((c1, c2) -> {

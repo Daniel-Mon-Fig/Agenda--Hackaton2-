@@ -65,7 +65,7 @@ public class Main {
                              break;
                          case 2:
                              System.out.println("Nuevo apellido: \n");
-                             String nuevoApeliido = sc.nextLine();
+                             String nuevoApellido = sc.nextLine();
                              boolean modificar = agenda.modificarNumero(buscarNombre, apellidoBuscado, nuevoApellido);
                              if(modificar){
                                  System.out.println("El número se modifico de manera exitosa");
