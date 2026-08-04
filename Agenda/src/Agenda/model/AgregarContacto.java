@@ -22,28 +22,31 @@ public class AgregarContacto {
         System.out.print("Apellido: ");
         String apellido = sc.nextLine();
 
-        System.out.print("Teléfono: ");
-
-        String numero;
-        while (true) {
-            System.out.print("Teléfono (10 dígitos): ");
-            numero = sc.nextLine();
-
-            // Validación: solo números y longitud 10
-            if (numero.matches("\\d{10}")) {
-                break; // válido, salimos del ciclo
-            } else {
-                System.out.println("Número inválido. Debe contener exactamente 10 dígitos numéricos.");
-            }
+        if (agenda.existeContacto(nombre, apellido)) {
+            System.out.println("Ya existe un contacto con ese nombre y apellido. No se puede duplicar.");
+            return; // salimos sin guardar
         }
+            String numero;
+            while (true) {
+                System.out.print("Teléfono: ");
+                numero = sc.nextLine();
 
-        //se crea el contacto
-        Contacto nuevo = new Contacto(nombre, apellido, numero);
+                // Validación: solo números y longitud 10
+                if (numero.matches("\\d{10}")) {
+                    break; // válido, salimos del ciclo
+                } else {
+                    System.out.println("Número inválido. Debe contener exactamente 10 dígitos numéricos.");
+                }
+            }
 
-        //guardar contacto en la agenda
-        agenda.AgregarContacto(nuevo);
+            //se crea el contacto
+            Contacto nuevo = new Contacto(nombre, apellido, numero);
 
-        System.out.println("El contacto se guardó correctamente");
+            //guardar contacto en la agenda
+            agenda.AgregarContacto(nuevo);
+
+            System.out.println("El contacto se guardó correctamente");
+
 
     }
 }

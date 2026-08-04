@@ -1,5 +1,5 @@
 package Agenda.main;
- import Agenda.model.*;
+import Agenda.model.*;
 
  import java.util.Scanner;
 
@@ -22,9 +22,11 @@ public class Main {
             System.out.println("6. Salir ");
             System.out.print("Selecciona una opción: ");
             opc = sc.nextInt();
+            sc.nextLine();
 
             switch (opc) {
                 case 1:
+                    System.out.println("========= AGREGAR CONTACTO ============");
                     AgregarContacto agregar= new AgregarContacto(agenda);
                     agregar.add();
 
@@ -32,7 +34,6 @@ public class Main {
                 case 2:
                     System.out.println("========= BUSCAR CONTACTO ============");
                     System.out.println("Escribe el nombre del contacto que quieres buscar:");
-                    sc.nextLine();
                     String nombreBuscado = sc.nextLine();
 
                     BuscarContacto buscador = new BuscarContacto(agenda);
@@ -44,29 +45,31 @@ public class Main {
                     break;
                 case 4:
                     System.out.println("========= MODIFICAR CONTACTO ============");
-                    System.out.println("Escribe el nobre de la persona a la que quieres modificar \n");
+                    System.out.print("Escribe el nombre de la persona a la que quieres modificar: ");
                     String buscarNombre = sc.nextLine();
-                    System.out.println("Escribe el apellido de la persona  \n");
+                    System.out.print("Escribe el apellido de la persona: ");
                     String apellidoBuscado = sc.nextLine();
                     System.out.println("¿Qué es lo que quieres modificar?");
-                    System.out.println("1. Numero");
+                    System.out.println("1. Número");
                     System.out.println("2. Apellido");
                     System.out.println("3. Nombre");
+                    System.out.println("4. Menú Principal");
                      int opcModificar = sc.nextInt();
+                     sc.nextLine();
 
                      switch (opcModificar){
                          case 1:
-                             System.out.println("Nuevo número: \n");
+                             System.out.print("Nuevo número: ");
                              String nuevoNum = sc.nextLine();
                              boolean modificar = agenda.modificarNumero(buscarNombre, apellidoBuscado, nuevoNum);
                              if(modificar){
-                                 System.out.println("El número se modifico de manera exitosa");
+                                 System.out.println("El número se modificó de manera exitosa");
                              }else {
                                  System.out.println("El contacto no existe");
                              }
                              break;
                          case 2:
-                             System.out.println("Nuevo apellido: \n");
+                             System.out.print("Nuevo apellido: ");
                              String nuevoApellido = sc.nextLine();
                              boolean modificar2 = agenda.modificarApellido(buscarNombre, apellidoBuscado, nuevoApellido);
                              if(modificar2){
@@ -76,8 +79,17 @@ public class Main {
                              }
                              break;
                          case 3:
+                             System.out.print("Nuevo nombre: ");
+                             String nuevoNombre = sc.nextLine();
+                             boolean modificar3 = agenda.modificarNombre(buscarNombre, apellidoBuscado, nuevoNombre);
+                             if(modificar3){
+                                 System.out.println("El nombre se modificó de manera exitosa");
+                             }else {
+                                 System.out.println("El contacto no existe");
+                             }
                              break;
                          case 4:
+                             System.out.println("Salir al menú principal");
                              break;
                          default:
                              System.out.println("opción no valida");
@@ -91,6 +103,7 @@ public class Main {
 
                     break;
                 case 6:
+                    System.out.println("Cerrando Agenda");
                     break;
                 default:
                     System.out.println("Elige una opción valida");
@@ -99,6 +112,5 @@ public class Main {
         }while (opc != 6) ;
 
     }
-
 
 }

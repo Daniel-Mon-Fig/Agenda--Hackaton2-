@@ -50,9 +50,15 @@ public class Agenda {
         return false;
     }
 
-
-
-    //NOTA: Se pudo haber modificado los tres atributos en el mismo metodo pero el usuario tendría que escribir todo de nuevo
+    public boolean existeContacto(String nombre, String apellido) {
+        for (Contacto contacto : contactos) {
+            if (contacto.getNombre().equalsIgnoreCase(nombre) &&
+                    contacto.getApellido().equalsIgnoreCase(apellido)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 
