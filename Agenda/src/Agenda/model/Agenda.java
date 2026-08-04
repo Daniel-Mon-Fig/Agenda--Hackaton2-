@@ -18,7 +18,7 @@ public class Agenda {
 
     //1. MODIFICAR NUMERO
     //hacemos el metodo booleano porque va a regresar la banderita de false o true
-    public boolean modificarNumero(String nombre, String apellido, int numeroCambiado){
+    public boolean modificarNumero(String nombre, String apellido, String numeroCambiado){
         for (Contacto c : contactos) { //Este es un for-each. Porque no le vamos a pedir un index al usuario, le vamos a pedir el nombre
             if (c.getNombre().equalsIgnoreCase(nombre) && c.getApellido().equalsIgnoreCase(apellido)) {
                 // Cambiamos el numero con el metodo setter

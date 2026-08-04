@@ -34,7 +34,13 @@ public class Main {
                     agregar.add();
                     break;
                 case 2:
+                    System.out.println("========= BUSCAR CONTACTO ============");
+                    System.out.println("Escribe el nombre del contacto que quieres buscar:");
+                    sc.nextLine();
+                    String nombreBuscado = sc.nextLine();
+
                     BuscarContacto buscador = new BuscarContacto(agenda);
+                    buscador.buscarContacto(nombreBuscado);
                     break;
                 case 3:
                     EliminarContacto eliminar = new EliminarContacto(agenda);
@@ -55,7 +61,7 @@ public class Main {
                      switch (opcModificar){
                          case 1:
                              System.out.println("Nuevo número: \n");
-                             int nuevoNum = sc.nextInt();
+                             String nuevoNum = sc.nextLine();
                              boolean modificar = agenda.modificarNumero(buscarNombre, apellidoBuscado, nuevoNum);
                              if(modificar){
                                  System.out.println("El número se modifico de manera exitosa");
@@ -96,7 +102,7 @@ public class Main {
                     System.out.println("Elige una opción valida");
                     break;
             }
-        }while (opc >= 5) ;
+        }while (opc != 6) ;
 
     }
 

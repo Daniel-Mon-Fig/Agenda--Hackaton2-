@@ -12,11 +12,11 @@ public class EliminarContacto {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Número del contacto a eliminar: ");
-        int numeroBuscado = sc.nextInt();
+        String numeroBuscado = sc.nextLine();
 
         for (int i = 0; i < agenda.getContactos().size(); i++) {
 
-            if (agenda.getContactos().get(i).getNumero() == numeroBuscado) {
+            if (agenda.getContactos().get(i).getNumero().equalsIgnoreCase(numeroBuscado)) {
 
                 agenda.getContactos().remove(i);
 
