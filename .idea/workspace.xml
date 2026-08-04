@@ -13,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agenda/src/Agenda/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Agenda/src/Agenda/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agenda/src/Agenda/model/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Agenda/src/Agenda/model/Agenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agenda/src/Agenda/model/Contacto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Agenda/src/Agenda/model/Contacto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +25,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Merging develop"
+    "git-widget-placeholder": "Merging cassandra"
   }
 }]]></component>
   <component name="TaskManager">
