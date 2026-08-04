@@ -23,7 +23,19 @@ public class AgregarContacto {
         String apellido = sc.nextLine();
 
         System.out.print("Teléfono: ");
-        int numero = sc.nextInt();
+
+        String numero;
+        while (true) {
+            System.out.print("Teléfono (10 dígitos): ");
+            numero = sc.nextLine();
+
+            // Validación: solo números y longitud 10
+            if (numero.matches("\\d{10}")) {
+                break; // válido, salimos del ciclo
+            } else {
+                System.out.println("Número inválido. Debe contener exactamente 10 dígitos numéricos.");
+            }
+        }
 
         //se crea el contacto
         Contacto nuevo = new Contacto(nombre, apellido, numero);

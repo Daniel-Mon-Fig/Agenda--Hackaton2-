@@ -1,12 +1,7 @@
 package Agenda.main;
- import Agenda.model.Agenda;
- import Agenda.model.AgregarContacto;
- import Agenda.model.ListarContacto;
- import Agenda.model.BuscarContacto;
+ import Agenda.model.*;
 
- import java.sql.SQLOutput;
  import java.util.Scanner;
- import Agenda.model.EliminarContacto;
 
 
 public class Main {
@@ -25,16 +20,23 @@ public class Main {
             System.out.println("4. Modificar contacto");
             System.out.println("5. Mostrar todos los contactos");
             System.out.println("6. Salir ");
-            System.out.println("Selecciona una opción: ");
+            System.out.print("Selecciona una opción: ");
             opc = sc.nextInt();
 
             switch (opc) {
                 case 1:
                     AgregarContacto agregar= new AgregarContacto(agenda);
                     agregar.add();
+
                     break;
                 case 2:
+                    System.out.println("========= BUSCAR CONTACTO ============");
+                    System.out.println("Escribe el nombre del contacto que quieres buscar:");
+                    sc.nextLine();
+                    String nombreBuscado = sc.nextLine();
+
                     BuscarContacto buscador = new BuscarContacto(agenda);
+                    buscador.buscarContacto(nombreBuscado);
                     break;
                 case 3:
                     EliminarContacto eliminar = new EliminarContacto(agenda);
@@ -55,7 +57,7 @@ public class Main {
                      switch (opcModificar){
                          case 1:
                              System.out.println("Nuevo número: \n");
-                             int nuevoNum = sc.nextInt();
+                             String nuevoNum = sc.nextLine();
                              boolean modificar = agenda.modificarNumero(buscarNombre, apellidoBuscado, nuevoNum);
                              if(modificar){
                                  System.out.println("El número se modifico de manera exitosa");
@@ -79,16 +81,14 @@ public class Main {
                              break;
                          default:
                              System.out.println("opción no valida");
-
-
                      }
-
-
-
                     break;
                 case 5:
+                    EspaciosLibres tamano= new EspaciosLibres(agenda);
+                    tamano.mostrarTamanoAgenda();
                     ListarContacto listarContacto = new ListarContacto();
                     listarContacto.listarContactos(agenda);
+
                     break;
                 case 6:
                     break;
@@ -96,7 +96,7 @@ public class Main {
                     System.out.println("Elige una opción valida");
                     break;
             }
-        }while (opc >= 5) ;
+        }while (opc != 6) ;
 
     }
 
