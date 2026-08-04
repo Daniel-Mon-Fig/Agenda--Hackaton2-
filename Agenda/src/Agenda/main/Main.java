@@ -66,9 +66,9 @@ public class Main {
                          case 2:
                              System.out.println("Nuevo apellido: \n");
                              String nuevoApellido = sc.nextLine();
-                             boolean modificar = agenda.modificarNumero(buscarNombre, apellidoBuscado, nuevoApellido);
-                             if(modificar){
-                                 System.out.println("El número se modifico de manera exitosa");
+                             boolean modificar2 = agenda.modificarApellido(buscarNombre, apellidoBuscado, nuevoApellido);
+                             if(modificar2){
+                                 System.out.println("El apellido se modifico de manera exitosa");
                              }else {
                                  System.out.println("El contacto no existe");
                              }
