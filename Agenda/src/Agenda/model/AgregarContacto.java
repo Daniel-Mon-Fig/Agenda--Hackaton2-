@@ -23,7 +23,7 @@ public class AgregarContacto {
         String apellido = sc.nextLine();
 
         System.out.print("Teléfono: ");
-        int numero = sc.nextInt();
+        String numero = sc.nextLine();
 
         //se crea el contacto
         Contacto nuevo = new Contacto(nombre, apellido, numero);
