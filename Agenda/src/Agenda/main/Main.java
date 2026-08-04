@@ -3,6 +3,7 @@ package Agenda.main;
  import Agenda.model.AgregarContacto;
  import Agenda.model.ListarContacto;
  import Agenda.model.BuscarContacto;
+ import Agenda.model.EspaciosLibres;
 
  import java.sql.SQLOutput;
  import java.util.Scanner;
@@ -24,7 +25,8 @@ public class Main {
             System.out.println("3. Eliminar un contacto");
             System.out.println("4. Modificar contacto");
             System.out.println("5. Mostrar todos los contactos");
-            System.out.println("6. Salir ");
+            System.out.println("6. Ver espacios libres");
+            System.out.println("7. Salir ");
             System.out.println("Selecciona una opción: ");
             opc = sc.nextInt();
 
@@ -91,6 +93,10 @@ public class Main {
                     listarContacto.listarContactos(agenda);
                     break;
                 case 6:
+                    EspaciosLibres espaciosLibres = new EspaciosLibres(agenda);
+                    espaciosLibres.espaciosLibres();
+                    break;
+                case 7:
                     break;
                 default:
                     System.out.println("Elige una opción valida");

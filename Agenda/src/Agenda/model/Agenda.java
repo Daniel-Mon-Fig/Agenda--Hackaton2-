@@ -5,12 +5,17 @@ import java.util.ArrayList;
 public class Agenda {
 
     private ArrayList<Contacto> contactos = new ArrayList<>();
+    private int tamanoMaximo = 20;
 
     public void AgregarContacto(Contacto nuevo) {
         contactos.add(nuevo);
     }
     public ArrayList<Contacto> getContactos() {
         return contactos;
+    }
+
+    public int getTamanoMaximo() {
+        return tamanoMaximo;
     }
 
 

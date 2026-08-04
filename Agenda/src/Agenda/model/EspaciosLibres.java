@@ -1,3 +1,5 @@
+package Agenda.model;
+
 public class EspaciosLibres {
 
     private Agenda agenda;
