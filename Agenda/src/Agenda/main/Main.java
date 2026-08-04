@@ -1,12 +1,7 @@
 package Agenda.main;
- import Agenda.model.Agenda;
- import Agenda.model.AgregarContacto;
- import Agenda.model.ListarContacto;
- import Agenda.model.BuscarContacto;
+ import Agenda.model.*;
 
- import java.sql.SQLOutput;
  import java.util.Scanner;
- import Agenda.model.EliminarContacto;
 
 
 public class Main {
@@ -25,13 +20,14 @@ public class Main {
             System.out.println("4. Modificar contacto");
             System.out.println("5. Mostrar todos los contactos");
             System.out.println("6. Salir ");
-            System.out.println("Selecciona una opción: ");
+            System.out.print("Selecciona una opción: ");
             opc = sc.nextInt();
 
             switch (opc) {
                 case 1:
                     AgregarContacto agregar= new AgregarContacto(agenda);
                     agregar.add();
+
                     break;
                 case 2:
                     System.out.println("========= BUSCAR CONTACTO ============");
@@ -85,16 +81,14 @@ public class Main {
                              break;
                          default:
                              System.out.println("opción no valida");
-
-
                      }
-
-
-
                     break;
                 case 5:
+                    EspaciosLibres tamano= new EspaciosLibres(agenda);
+                    tamano.mostrarTamanoAgenda();
                     ListarContacto listarContacto = new ListarContacto();
                     listarContacto.listarContactos(agenda);
+
                     break;
                 case 6:
                     break;
